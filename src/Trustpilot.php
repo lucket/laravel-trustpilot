@@ -4,6 +4,7 @@ namespace IGD\Trustpilot;
 use IGD\Trustpilot\API\BusinessUnit\BusinessUnit;
 use IGD\Trustpilot\API\BusinessUnit\BusinessUnitApi;
 use IGD\Trustpilot\API\BusinessUnit\Product\ProductApi;
+use IGD\Trustpilot\API\BusinessUnit\Review\Product\ProductReviewApi;
 use IGD\Trustpilot\API\Category\CategoryApi;
 use IGD\Trustpilot\Query\Builder;
 
@@ -48,5 +49,15 @@ class Trustpilot
     public function categories(): Builder
     {
         return new Builder(new CategoryApi());
+    }
+
+    /**
+     * Get the product review query builder.
+     *
+     * @return \IGD\Trustpilot\Query\Builder
+     */
+    public function productsReview(): Builder
+    {
+        return (new Builder(new ProductReviewApi()))->setArrayAsComma();
     }
 }
