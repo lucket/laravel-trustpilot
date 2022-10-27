@@ -1,19 +1,20 @@
 {
-    "name": "igdwebdev/laravel-trustpilot",
+    "name": "lucket/laravel-trustpilot",
     "description": "Laravel PHP library for Trustpilot's API",
     "keywords": [
+        "lucket",
         "mccaulay",
         "igdwebdev",
         "laravel-trustpilot",
         "laravel",
         "trustpilot"
     ],
-    "homepage": "https://github.com/igdwebdev/laravel-trustpilot",
+    "homepage": "https://github.com/lucket/laravel-trustpilot",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "McCaulay Hudson",
+            "name": "Luca Tanieli",
             "role": "Developer"
         }
     ],

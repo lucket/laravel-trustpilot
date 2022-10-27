@@ -8,6 +8,14 @@ You can install the package via composer:
 composer require lucket/laravel-trustpilot
 ```
 
+after adding in composer.json
+repositories
+```
+ {
+    "type": "vcs",
+    "url": "git@github.com:lucket/laravel-trustpilot.git"
+}
+```
 ## Official Documentation
 - [Trustpilot Documentation](https://developers.trustpilot.com/)
 
