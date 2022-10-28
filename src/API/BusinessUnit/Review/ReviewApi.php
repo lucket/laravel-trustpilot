@@ -41,4 +41,23 @@ class ReviewApi extends ResourceApi
             return (new Review())->data($review);
         });
     }
+
+    /**
+     * Find the item from the id.
+     *
+     * @param string $id
+     * @param array $params
+     * @return mixed
+     */
+    public function find(string $id, array $params = [])
+    {
+        // Country is required...
+        //if (!isset($params['country'])) {
+        //    $params['country'] = 'GB';
+        //}
+        $response = $this->get('reviews/' . $id, $params);
+        return collect($response->reviews)->map(function ($review) {
+            return (new Review())->data($review);
+        });
+    }
 }

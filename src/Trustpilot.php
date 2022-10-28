@@ -5,6 +5,7 @@ use IGD\Trustpilot\API\BusinessUnit\BusinessUnit;
 use IGD\Trustpilot\API\BusinessUnit\BusinessUnitApi;
 use IGD\Trustpilot\API\BusinessUnit\Product\ProductApi;
 use IGD\Trustpilot\API\BusinessUnit\Review\Product\ProductReviewApi;
+use IGD\Trustpilot\API\BusinessUnit\Review\ReviewApi;
 use IGD\Trustpilot\API\Category\CategoryApi;
 use IGD\Trustpilot\Query\Builder;
 
@@ -52,12 +53,12 @@ class Trustpilot
     }
 
     /**
-     * Get the product review query builder.
+     * Get the review query builder.
      *
      * @return \IGD\Trustpilot\Query\Builder
      */
-    public function productsReview(): Builder
+    public function reviews(): Builder
     {
-        return (new Builder(new ProductReviewApi()))->setArrayAsComma();
+        return (new Builder(new ReviewApi()))->setArrayAsComma();
     }
 }
